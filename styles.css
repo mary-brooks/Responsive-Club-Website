@@ -1,0 +1,285 @@
+html {
+    background-color: #f0f6f6;
+    color: #333834;
+    font-size: 16px;
+    font-family: 'Mulish', sans-serif;
+    box-sizing: border-box;
+}
+
+/* General */
+
+body {
+    width: 75%;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 'header header header'
+                         'about-img about-text about-text'
+                         'find-us find-us-img find-us-img'
+                         'image-1 our-games image-2'
+                         'footer footer footer'; 
+    grid-gap: 0.25rem;
+    align-content: center;
+    justify-items: stretch;
+    align-items: stretch;
+    margin:  auto; 
+}
+
+h1 {
+    font-family: 'Rubik Vinyl', cursive;
+    font-size: 3.5rem; 
+    text-transform: uppercase;
+    letter-spacing: 1rem; 
+    padding: 1rem 0; 
+    margin: 0; 
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Rubik Vinyl', cursive;
+    font-size: 2rem; 
+    letter-spacing: 0.5rem;
+    margin: 0;
+    padding: 0.5rem 0; 
+}
+
+/* Header */
+
+header {
+    background-image: linear-gradient(#F5F792, #fff); 
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
+}
+
+header img {
+    width: 8rem;
+    height: 5rem; 
+    align-self: center;
+    padding: 1rem; 
+}
+
+/* About Section */
+
+.about-img {
+    grid-area: about-img;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.about-text {
+    background-image: linear-gradient( #B3F3F5, #fff); 
+    color: #333834;
+    font-size: 1.25rem; 
+    padding: 2rem;
+    width: auto-fit; 
+    grid-area: about-text; 
+}
+
+.about-text p, .find-us p {
+    line-height: 1.5;
+}
+
+/* Find Us Section */
+
+.find-us {
+    background-image: linear-gradient(#a8f080, #fff);
+    font-size: 1.25rem;
+    padding: 2rem;
+    width: auto-fit; 
+    grid-area: find-us;
+}
+
+#find-us-img {
+    grid-area: find-us-img;
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+}
+
+/* Our Games Section */
+
+.our-games {
+    background-image: linear-gradient( #B3F3F5, #fff);
+    font-size: 1rem;
+    padding: 2rem;
+    width: auto-fit; 
+    grid-area: our-games;
+}
+
+.our-games h2 {
+    font-size: 2rem;
+    text-align: center; 
+}
+
+.our-games ul {
+    list-style: none;
+    text-align: center;
+    padding-inline-start: 0;
+}
+
+.our-games li {
+    line-height: 1.75;
+}
+
+#image-1 {
+    grid-area: image-1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#image-2 {
+    grid-area: image-2; 
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Buttons */
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C6462E;
+    border-radius: 1.25rem;
+    border-width: 0px;
+    text-align: center;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1.5rem; 
+    width: fit-content;
+}
+
+button:hover {
+    cursor: pointer; 
+}
+
+button img {
+    height: 2rem; 
+    width: auto; 
+}
+
+a {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 1rem; 
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    background-image: linear-gradient(#F5F792, #fff);
+    display: flex;
+    justify-content: center;
+    grid-area: footer;
+    padding: 2rem; 
+}
+
+footer span {
+    font-family: 'Rubik Vinyl', cursive;
+    font-size: 2.5rem; 
+    text-align: center;
+    letter-spacing: 0.5rem;
+    margin: 0;
+    padding: 0 2rem; 
+}
+
+footer img {
+    width: auto; 
+    height: 5rem;
+    padding: 0 2rem; 
+}
+
+
+@media only screen and (max-width: 1400px) {
+    html {
+        font-size: 14px; 
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    html {
+        font-size: 12px; 
+    }
+   
+    body {
+        width: 100%; 
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 10px; 
+    }
+
+    button {
+        border: 0px; 
+    }
+}
+
+@media only screen and (max-width: 595px) {
+    body {
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-rows: repeat(6,auto);
+        grid-template-areas: 'header header header'
+                             'about-img about-img about-img'
+                             'about-text about-text about-text'
+                             'find-us find-us-img find-us-img'
+                             'image-1 our-games image-2'
+                             'footer footer footer'; 
+    }
+
+    header img {
+        display: none;
+    }
+
+    button img {
+        display: none; 
+    }
+
+    .about-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-rows: repeat(7, auto);
+        grid-template-areas: 'header header header'
+                             'about-img about-img about-img'
+                             'about-text about-text about-text'
+                             'find-us find-us find-us'
+                             'find-us-img find-us-img find-us-img'
+                             'image-1 our-games image-2'
+                             'footer footer footer'; 
+    }
+
+    header h1 {
+        font-size: 2.5rem; 
+    }
+
+    footer {
+        font-size: 2rem; 
+    }
+
+    .find-us {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+}
